@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <button id="icone"><img src="./sun.png" alt="Ícone"></button>
+        <input type="text" id="resultado" class="tela" disabled>
+
+        <table>
+            <tr>
+                <td id="x" colspan="2"><button onclick="abrirModal()">Record</button></td>
+<div id="modal" class="modal" style=" background-color: 1f1f1f;;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Últimos 5 Cálculos</h2>
+        <ul id="historico-lista">
+         
+        </ul>
+    </div>
+</div>
+                <td><button onclick="adicionarValor('(')"> ( </button></td>
+                <td><button onclick="adicionarValor(')')"> ) </button></td>
+                
+                <td><button onclick="apagar()">AC</button></td>
+                <td><button onclick="limpar()">C</button></td>
+            </tr>
+            <tr>
+                
+                <td><button onclick="calcularSeno()">sin</button></td>
+                <td><button onclick="porcentagem()">%</button></td>
+                <td><button onclick="adicionarValor('7')">7</button></td>
+                <td><button onclick="adicionarValor('8')">8</button></td>
+                <td><button onclick="adicionarValor('9')">9</button></td>
+                <td><button onclick="adicionarValor('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calcularCosseno()">cos</button></td>
+                <td><button onclick="calcularPI()">π</button></td>
+                <td><button onclick="adicionarValor('4')">4</button></td>
+                <td><button onclick="adicionarValor('5')">5</button></td>
+                <td><button onclick="adicionarValor('6')">6</button></td>
+                <td><button onclick="adicionarValor('*')">*</button></td>
+            </tr>
+            <tr>
+               
+                <td><button onclick="calcularTangente()">tan</button></td>
+                <td><button onclick="calcularRaiz()">√</button></td>
+                <td><button onclick="adicionarValor('1')">1</button></td>
+                <td><button onclick="adicionarValor('2')">2</button></td>
+                <td><button onclick="adicionarValor('3')">3</button></td>
+                <td><button onclick="adicionarValor('-')">-</button></td>
+            </tr>
+            <tr>
+               
+                <td><button onclick="calcularFatorial()">X!</button></td>
+                <td><button onclick="calcularPotencia()">x^</button></td>
+                
+                <td><button onclick="adicionarValor('.')">.</button></td>
+                <td><button onclick="adicionarValor('0')">0</button></td>
+                <td><button onclick="calcularResultado()">=</button></td>
+                <td><button onclick="adicionarValor('+')">+</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
